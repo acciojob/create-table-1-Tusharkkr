@@ -1,17 +1,16 @@
 function insert_Row() {
-    //Write your code here
-	let btn = document.querySelector('input')
-        let table = document.querySelector('table')
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            let tr = document.createElement('tr')
-            let td1 = document.createElement('td')
-            let td2 = document.createElement('td')
-            td1.innerText='New Cell 1'
-            td2.innerText='New Cell 2'
-            tr.append(td1,td2)
-            table.prepend(tr)
-        })
-  
-  
+
+    // table ko pakdo
+    let table = document.getElementById("sampleTable");
+
+    // top pe new row add karo
+    let row = table.insertRow(0);
+
+    // 2 cells banao
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+
+    // text daalo
+    cell1.innerHTML = "New Cell1";
+    cell2.innerHTML = "New Cell2";
 }
